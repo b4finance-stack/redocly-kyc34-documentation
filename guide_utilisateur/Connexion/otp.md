@@ -8,7 +8,7 @@ description: Bonnes pratiques et contraintes liées à l’utilisation d’un co
 Ce guide présente les règles à suivre pour l’utilisation d’un code OTP (*One-Time Password*) dans le cadre du processus d’authentification.
 
 ---
-
+ 
 ## 1. ⏱️ Durée de validité du code
 
 Une fois généré et envoyé, le code OTP reste **valable pendant 15 minutes**.
