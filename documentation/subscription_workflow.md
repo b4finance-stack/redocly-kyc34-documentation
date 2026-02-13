@@ -9,7 +9,7 @@ Each status corresponds to a specific stage of the lifecycle, from preparation b
 
 {% table %}
   - Status (EN / API)<span style="display:inline-block; width: 12ch;"></span>
-  - Description
+  - Description 
   ---
   - <span style="display:inline-block; white-space:nowrap; font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace; font-size:0.9em; padding:2px 8px; border-radius:6px; background:rgba(127,127,127,0.18); border:1px solid rgba(127,127,127,0.35);">draft</span>
   - The subscription is in progress on the <strong>distributor</strong> or <strong>operator</strong> side. At this stage, the file is still editable.
