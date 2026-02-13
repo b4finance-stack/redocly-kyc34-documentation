@@ -1,0 +1,134 @@
+- group: Documentation
+  groupTranslationKey: sidebar.documentation
+  page: documentation/index.md
+  items:
+    - page: documentation/entity.md
+      label: Entity
+      labelTranslationKey: sidebar.documentation.entity
+    - page: documentation/due_diligence_workflow.md
+      label: Due diligence workflow
+      labelTranslationKey: sidebar.documentation.dueDiligenceWorkflow
+    - page: documentation/subscription_workflow.md
+      label: Subscription workflow
+      labelTranslationKey: sidebar.documentation.subscriptionWorkflow
+    - page: documentation/distribution_agreement.md
+      label: Distribution agreement
+      labelTranslationKey: sidebar.documentation.distributionAgreement
+
+- group: API Reference
+  groupTranslationKey: sidebar.apiReference
+  page: apis/index.yaml
+
+- group: Guide utilisateur
+  groupTranslationKey: sidebar.userGuide
+  page: guide_utilisateur/index.md
+  expanded: true
+  items:
+    - group: KYC
+      groupTranslationKey: sidebar.userGuide.kyc
+      expanded: true
+      items:
+        - page: guide_utilisateur/KYC/dashboard_vue_globale_et_personnalisable.md
+          label: Dashboard vue globale
+          labelTranslationKey: sidebar.userGuide.kyc.dashboardGlobal
+        - page: guide_utilisateur/KYC/creation_contrepartie.md
+          label: Création d'une contrepartie
+          labelTranslationKey: sidebar.userGuide.kyc.counterpartyCreation
+        - page: guide_utilisateur/KYC/envoie_fiche_contrepartie.md
+          label: Envoi de la fiche à la contrepartie
+          labelTranslationKey: sidebar.userGuide.kyc.sendCounterpartyForm
+        - page: guide_utilisateur/KYC/statuts.md
+          label: Statuts
+          labelTranslationKey: sidebar.userGuide.kyc.statuses
+        - page: guide_utilisateur/KYC/documents.md
+          label: Documents
+          labelTranslationKey: sidebar.userGuide.kyc.documents
+        - page: guide_utilisateur/KYC/autres_actions.md
+          label: Autres actions
+          labelTranslationKey: sidebar.userGuide.kyc.otherActions
+        - page: guide_utilisateur/KYC/details.md
+          label: Détails
+          labelTranslationKey: sidebar.userGuide.kyc.details
+        - page: guide_utilisateur/KYC/mifid.md
+          label: Mifid
+          labelTranslationKey: sidebar.userGuide.kyc.mifid
+
+    - group: LCB FT
+      groupTranslationKey: sidebar.userGuide.lcbft
+      expanded: true
+      items:
+        - page: guide_utilisateur/LCB_FT/scoring.md
+          label: Scoring
+          labelTranslationKey: sidebar.userGuide.lcbft.scoring
+        - page: guide_utilisateur/LCB_FT/screening.md
+          label: Screening
+          labelTranslationKey: sidebar.userGuide.lcbft.screening
+        - page: guide_utilisateur/LCB_FT/revue_periodique.md
+          label: Revue périodique
+          labelTranslationKey: sidebar.userGuide.lcbft.periodicReview
+        - page: guide_utilisateur/LCB_FT/settings_matrice.md
+          label: Settings matrice
+          labelTranslationKey: sidebar.userGuide.lcbft.matrixSettings
+
+    - group: Souscriptions
+      groupTranslationKey: sidebar.userGuide.subscriptions
+      expanded: true
+      items:
+        - page: guide_utilisateur/Souscriptions/dashboard.md
+          label: Dashboard
+          labelTranslationKey: sidebar.userGuide.subscriptions.dashboard
+        - page: guide_utilisateur/Souscriptions/acces_operateur.md
+          label: Accès opérateur
+          labelTranslationKey: sidebar.userGuide.subscriptions.operatorAccess
+        - page: guide_utilisateur/Souscriptions/acces_distributeur.md
+          label: Accès distributeur
+          labelTranslationKey: sidebar.userGuide.subscriptions.distributorAccess
+        - page: guide_utilisateur/Souscriptions/workflows_signature.md
+          label: Workflows signature
+          labelTranslationKey: sidebar.userGuide.subscriptions.signatureWorkflows
+        - page: guide_utilisateur/Souscriptions/subscription_statuts.md
+          label: Subscription statuts
+          labelTranslationKey: sidebar.userGuide.subscriptions.statuses
+        - page: guide_utilisateur/Souscriptions/suitability.md
+          label: Suitability
+          labelTranslationKey: sidebar.userGuide.subscriptions.suitability
+        - page: guide_utilisateur/Souscriptions/convention.md
+          label: Convention
+          labelTranslationKey: sidebar.userGuide.subscriptions.agreement
+        - page: guide_utilisateur/Souscriptions/acces_depositaire.md
+          label: Accès dépositaire
+          labelTranslationKey: sidebar.userGuide.subscriptions.depositaryAccess
+        - page: guide_utilisateur/Souscriptions/informations_complementaires.md
+          label: Informations complémentaires
+          labelTranslationKey: sidebar.userGuide.subscriptions.additionalInformation
+        - page: guide_utilisateur/Souscriptions/creer_plusieurs_souscriptions.md
+          label: Créer plusieurs souscriptions
+          labelTranslationKey: sidebar.userGuide.subscriptions.createMultiple
+
+    - group: Export de données
+      groupTranslationKey: sidebar.userGuide.dataExport
+      expanded: true
+      items:
+        - page: guide_utilisateur/DataExport/dataexport.md
+          label: Export
+          labelTranslationKey: sidebar.userGuide.dataExport.export
+
+    - group: Réglages
+      groupTranslationKey: sidebar.userGuide.settings
+      expanded: true
+      items:
+        - page: guide_utilisateur/Reglages/tableau_des_droits.md
+          label: Tableau des droits
+          labelTranslationKey: sidebar.userGuide.settings.rightsTable
+        - page: guide_utilisateur/Reglages/configuration_sur_demande.md
+          label: Configuration sur demande
+          labelTranslationKey: sidebar.userGuide.settings.onDemandConfiguration
+
+    - group: Connexion
+      groupTranslationKey: sidebar.userGuide.connection
+      expanded: true
+      items:
+        - page: guide_utilisateur/Connexion/otp.md
+          label: Règles d’utilisation d’un OTP
+          labelTranslationKey: sidebar.userGuide.connection.otpRules
+

@@ -1,0 +1,18 @@
+{
+    "name": "b4finance",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+      "start": "npx @redocly/cli preview",
+      "preview": "npx @redocly/cli preview-docs openapi.yaml",
+      "build":   "npx @redocly/cli build-docs openapi.yaml",
+      "l10n:sync:en": "bash scripts/l10n-sync.sh en all",
+      "l10n:sync:en:guide": "bash scripts/l10n-sync.sh en guide",
+      "l10n:check:en": "bash scripts/l10n-check.sh en all",
+      "l10n:check:en:guide": "bash scripts/l10n-check.sh en guide"
+    },
+    "dependencies": {
+      "@redocly/redoc-revel": "*"
+    }
+  }

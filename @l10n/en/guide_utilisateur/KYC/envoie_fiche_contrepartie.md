@@ -1,0 +1,68 @@
+# Send the record to the counterparty
+
+
+
+---
+
+## 🎯 Objective
+Send the counterparty record so they can **complete or update their information directly** from their dedicated space.
+
+---
+
+## 📨 Sending steps
+
+### 1️⃣ Open the record
+From the counterparty record, click **“Collecting”**,  
+then select **“Send to investor”**.
+
+{% img src="../images/KYC/envoie_fiche_contrepartie/image7.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% /img %}
+
+
+---
+
+### 2️⃣ Select the contact
+Choose the **contact** to whom you want to send the record.
+
+{% img src="../images/KYC/envoie_fiche_contrepartie/image8.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% /img %}
+
+You can:
+- **customize the message**,  
+- **set the completion link expiration date**.
+
+---
+
+### 3️⃣ Preconditions before sending
+
+#### 👤 For an **individual**:
+You must provide at least the contact details (first name, last name, email).
+
+#### 🏢 For a **legal entity** or a **fund**:
+You must provide **at least one representative or contact** with their details  
+to initiate sending the link.
+
+---
+
+## 🔄 Follow-up after sending
+
+Once the record is sent:
+- The **status** changes from `Collecting` to `Pending`.  
+- Fields become **greyed out**, editable only by the counterparty.  
+- You can **take control back** at any time if needed.  
+- Information entered by the counterparty is **saved in real time**.
+
+{% img src="../images/KYC/envoie_fiche_contrepartie/image9.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% /img %}
+
+
+---
+
+## 👁️ Investor side
+
+The investor receives a secure link to complete their record.  
+All fields marked with an **asterisk (*)** are **mandatory** to validate the record.
+
+At the end of the process, they click "Confirm my information" to send the record back to the operator.
+{% img src="../images/KYC/envoie_fiche_contrepartie/image10.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% /img %}

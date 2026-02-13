@@ -1,0 +1,40 @@
+# reunite:
+  # ignoreLint: true
+  # ignoreLinkChecker: true
+extends:
+  - minimal
+
+l10n:
+  defaultLocale: fr
+  locales:
+    - code: fr
+      name: "🇫🇷 Français"
+    - code: en
+      name: "🇬🇧 English"
+
+links:
+  - href: https://fonts.googleapis.com/css2?family=VT323&display=swap
+  - href: https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap
+
+
+# redocly.yaml (extrait)
+scripts:
+  body:
+    - src: ./@theme/components/modal-image.bundle.js
+      defer: true
+    
+navbar:
+  items: []   # ← keep the key, but empty the list
+
+markdown:
+  toc:
+    depth: 2
+
+logo:
+  srcSet: "./images/logo_light.svg light, ./images/logo_dark.svg dark"
+  link: /documentation/
+  altText: "B4finance_logo"
+
+footer:
+  hide: true 
+  

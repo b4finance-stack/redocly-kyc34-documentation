@@ -1,0 +1,45 @@
+sidebar.documentation: Documentation
+sidebar.documentation.entity: Entity
+sidebar.documentation.dueDiligenceWorkflow: Due diligence workflow
+sidebar.documentation.subscriptionWorkflow: Subscription workflow
+sidebar.documentation.distributionAgreement: Distribution agreement
+sidebar.apiReference: API Reference
+
+sidebar.userGuide: User guide
+sidebar.userGuide.kyc: KYC
+sidebar.userGuide.kyc.dashboardGlobal: Dashboard overview
+sidebar.userGuide.kyc.counterpartyCreation: Create a counterparty
+sidebar.userGuide.kyc.sendCounterpartyForm: Send form to the counterparty
+sidebar.userGuide.kyc.statuses: Statuses
+sidebar.userGuide.kyc.documents: Documents
+sidebar.userGuide.kyc.otherActions: Other actions
+sidebar.userGuide.kyc.details: Details
+sidebar.userGuide.kyc.mifid: MiFID
+
+sidebar.userGuide.lcbft: AML/CFT
+sidebar.userGuide.lcbft.scoring: Scoring
+sidebar.userGuide.lcbft.screening: Screening
+sidebar.userGuide.lcbft.periodicReview: Periodic review
+sidebar.userGuide.lcbft.matrixSettings: Matrix settings
+
+sidebar.userGuide.subscriptions: Subscriptions
+sidebar.userGuide.subscriptions.dashboard: Dashboard
+sidebar.userGuide.subscriptions.operatorAccess: Operator access
+sidebar.userGuide.subscriptions.distributorAccess: Distributor access
+sidebar.userGuide.subscriptions.signatureWorkflows: Signature workflows
+sidebar.userGuide.subscriptions.statuses: Subscription statuses
+sidebar.userGuide.subscriptions.suitability: Suitability
+sidebar.userGuide.subscriptions.agreement: Agreement
+sidebar.userGuide.subscriptions.depositaryAccess: Depositary access
+sidebar.userGuide.subscriptions.additionalInformation: Additional information
+sidebar.userGuide.subscriptions.createMultiple: Create multiple subscriptions
+
+sidebar.userGuide.dataExport: Data export
+sidebar.userGuide.dataExport.export: Export
+
+sidebar.userGuide.settings: Settings
+sidebar.userGuide.settings.rightsTable: Rights table
+sidebar.userGuide.settings.onDemandConfiguration: On-demand configuration
+
+sidebar.userGuide.connection: Login
+sidebar.userGuide.connection.otpRules: OTP usage rules

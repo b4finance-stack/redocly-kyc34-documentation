@@ -1,0 +1,45 @@
+sidebar.documentation: Documentation
+sidebar.documentation.entity: Entity
+sidebar.documentation.dueDiligenceWorkflow: Due diligence workflow
+sidebar.documentation.subscriptionWorkflow: Subscription workflow
+sidebar.documentation.distributionAgreement: Distribution agreement
+sidebar.apiReference: API Reference
+
+sidebar.userGuide: Guide utilisateur
+sidebar.userGuide.kyc: KYC
+sidebar.userGuide.kyc.dashboardGlobal: Dashboard vue globale
+sidebar.userGuide.kyc.counterpartyCreation: "Création d'une contrepartie"
+sidebar.userGuide.kyc.sendCounterpartyForm: Envoi de la fiche à la contrepartie
+sidebar.userGuide.kyc.statuses: Statuts
+sidebar.userGuide.kyc.documents: Documents
+sidebar.userGuide.kyc.otherActions: Autres actions
+sidebar.userGuide.kyc.details: Détails
+sidebar.userGuide.kyc.mifid: Mifid
+
+sidebar.userGuide.lcbft: LCB FT
+sidebar.userGuide.lcbft.scoring: Scoring
+sidebar.userGuide.lcbft.screening: Screening
+sidebar.userGuide.lcbft.periodicReview: Revue périodique
+sidebar.userGuide.lcbft.matrixSettings: Settings matrice
+
+sidebar.userGuide.subscriptions: Souscriptions
+sidebar.userGuide.subscriptions.dashboard: Dashboard
+sidebar.userGuide.subscriptions.operatorAccess: Accès opérateur
+sidebar.userGuide.subscriptions.distributorAccess: Accès distributeur
+sidebar.userGuide.subscriptions.signatureWorkflows: Workflows signature
+sidebar.userGuide.subscriptions.statuses: Subscription statuts
+sidebar.userGuide.subscriptions.suitability: Suitability
+sidebar.userGuide.subscriptions.agreement: Convention
+sidebar.userGuide.subscriptions.depositaryAccess: Accès dépositaire
+sidebar.userGuide.subscriptions.additionalInformation: Informations complémentaires
+sidebar.userGuide.subscriptions.createMultiple: Créer plusieurs souscriptions
+
+sidebar.userGuide.dataExport: Export de données
+sidebar.userGuide.dataExport.export: Export
+
+sidebar.userGuide.settings: Réglages
+sidebar.userGuide.settings.rightsTable: Tableau des droits
+sidebar.userGuide.settings.onDemandConfiguration: Configuration sur demande
+
+sidebar.userGuide.connection: Connexion
+sidebar.userGuide.connection.otpRules: Règles d’utilisation d’un OTP
