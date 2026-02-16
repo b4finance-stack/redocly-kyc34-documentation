@@ -5,6 +5,8 @@ description: Bonnes pratiques et contraintes liées à l’utilisation d’un co
 
 # 🔐 Règles d’utilisation d’un OTP
 
+
+ahlalalaohllalalaoololo
 Ce guide présente les règles à suivre pour l’utilisation d’un code OTP (*One-Time Password*) dans le cadre du processus d’authentification.
 
 ---
