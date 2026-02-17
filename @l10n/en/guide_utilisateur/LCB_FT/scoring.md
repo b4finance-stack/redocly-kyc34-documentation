@@ -2,7 +2,7 @@
 
 ## AML/CFT section - Display and behavior
 
-The **AML/CFT** section is visible only if you have **analysis and/or approval rights** on a record.
+The **AML/CFT** section is visible only if you have **analysis and/or approval rights** on a file.
 
 ---
 
@@ -11,7 +11,7 @@ The **AML/CFT** section is visible only if you have **analysis and/or approval r
 The risk shown next to the section is the **overall file risk**, automatically determined from **criteria defined in scoring**.  
 This calculation includes the **weightings configured in your environment settings**.
 
-{% img src="../images/LCB FT/scoring/image15.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/LCB FT/scoring/scoring.png" alt="Global dashboard" width="1100" withLightbox=true %}
 {% /img %}
 
 
@@ -24,7 +24,7 @@ These criteria are based on responses to **questions present in the record**.
 
 Each criterion is **weighted** according to your settings.
 
-{% img src="../images/LCB FT/scoring/image16.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/LCB FT/scoring/risque.png" alt="Global dashboard" width="1100" withLightbox=true %}
 {% /img %}
 
 ---
@@ -35,7 +35,7 @@ By clicking a criterion, you can access:
 - the **details of questions** impacting that criterion,  
 - the **answers provided**,  
 - and an **explanatory panel** shown in the top-right corner  
-  (see the *PEP* criterion example in the image below).
+  (see the *PEP* criterion example in the image above).
 
 
 ---

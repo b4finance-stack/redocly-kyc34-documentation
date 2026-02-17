@@ -1,6 +1,6 @@
 # Details
 
-## Record section details
+## File's sections details
 
 ### Products
 Lets you **link a counterparty to a product or fund**.
@@ -13,25 +13,25 @@ Lets you **link a counterparty to a product or fund**.
 ---
 
 ### Details
-Contains **identity information** and displays the **completion percentage** based on required fields.
+Contains **identity information** and displays the **progress percentage** based on required fields.
 
 ---
 
 ### Main actions
-Lists the main actions performed on the record.
+Lists the main actions performed on the file.
 
 ---
 
 ### Identifier
-Displays the record’s **unique identifier**, to **share with support** if needed.
-{% img src="../images/KYC/details/image13.png" alt="Global dashboard" width="1100" withLightbox=true %}
+Displays the file’s **unique identifier**, to **share with support** if needed.
+{% img src="../images/KYC/details/identifier.png" alt="Global dashboard" width="800" withLightbox=true %}
 {% /img %}
 ---
 
 {% admonition type="info" %}
 ### 📅 Periodic review date (paid option)
 
-This option lets you **modify the approval date** during the **second approval** of a record.  
+This option lets you **modify the approval date** during the **second approval** of a file.  
 It allows you to **keep the initial review date**, instead of replacing it with the new approval date.
 
 During the second approval, a **calendar appears in the “Details” section**, in the **Approval date** field, so you can select or adjust the desired date.

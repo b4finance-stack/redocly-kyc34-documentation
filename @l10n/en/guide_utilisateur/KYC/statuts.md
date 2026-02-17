@@ -1,27 +1,27 @@
 ---
-title: KYC record statuses
+title: KYC files statuses
 description: Description of possible KYC record statuses and their impact on the operational workflow.
 ---
 
-# 📌 KYC record statuses
+# 📌 KYC files statuses
 
-This page describes the different **statuses** of a KYC record, their meaning, and the available actions for each status.
+This page describes the different **statuses** of a KYC file, their meaning, and the available actions for each status.
 
 ---
 
 ## 🔁 Main status list
 
 ### 1. Draft
-The record is being created by an operator (initial entry or draft save).
+The file is being created by an operator (initial entry or draft save).
 
 **Available actions:**
-- Edit the record.
+- Edit the file.
 - Complete information before sending.
 
 ---
 
-### 2. Sent / Pending (Sent to counterparty)
-The record has been sent to the external contact (counterparty) to complete their information.
+### 2. Sent / Awaiting (Sent to counterparty)
+The file has been sent to the external contact (counterparty) to complete their information.
 
 **Consequences:**
 - The counterparty can complete missing fields through the completion link.
@@ -34,8 +34,8 @@ Status indicating that information is being collected (internally or via the cou
 
 ---
 
-### 4. Under validation / In diligence
-The record has been completed and is being reviewed by the compliance/management company team.
+### 4. Under validation / In due diligence
+The file has been completed and is being reviewed by the compliance/management company team.
 
 **Available actions:**
 - Review provided documents.
@@ -45,7 +45,7 @@ The record has been completed and is being reviewed by the compliance/management
 ---
 
 ### 5. Approved / Validated
-The KYC record has been approved and can be used to link subscriptions or operations.
+The KYC file has been approved and can be used to link subscriptions or operations.
 
 **Effect:**
 - Information is shown in read-only mode (unless explicitly edited).
@@ -54,26 +54,26 @@ The KYC record has been approved and can be used to link subscriptions or operat
 ---
 
 ### 6. Rejected
-The record was rejected after review. The reason must be documented in the record.
+The file was rejected after review. The reason must be documented in the file.
 
 **Consequences:**
-- The operator can correct or archive the record.
+- The operator can correct or archive the file.
 - The counterparty must complete or provide additional elements before re-review.
 
 ---
 
 ## 🔧 Specific actions and rules
 
-- **Edit an approved record**: click *Edit investor*; the status automatically returns to *Collecting*.  
-- **Take control back** on a sent record: available at subscription or record level, depending on user permissions.  
-- **Audit log**: all status changes and actions must be tracked in the record history.
+- **Edit an approved file**: click *Edit investor*; the status automatically returns to *Collecting*.  
+- **Take control back** on a sent file: available at subscription or file level, depending on user permissions.  
+- **Audit log**: all status changes and actions should be tracked in the file history.
 
 ---
 
 ## ℹ️ Best practices
 
 - Document the reason when moving to *Rejected*.  
-- Use dashboard filters to list records by status (Draft, Pending, Under validation, Approved, Rejected).  
-- Keep supporting documents in the attached Documents section for audit.
+- Use dashboard filters to list the file by status (Draft, Awaiting, In due diligence, Approved, Rejected).  
+- Keep the documents in the attached Documents section for audit.
 
 ---

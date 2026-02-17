@@ -19,13 +19,13 @@ These exports make it easier to monitor, verify, and archive information related
 The **counterparty export** is done **by date range**.
 
 ### ▶️ Steps to follow:
-1. Select the **desired period** (dates correspond to each counterparty record's **creation date**).  
+1. Select the **desired period** (dates correspond to each counterparty file's **creation date**).  
 2. Click **“Run export”**.  
 3. Once the report is generated, a **notification email** is sent automatically.  
 4. The email contains a **direct download link** for the requested report.
 
 > 💡 The export includes all counterparties created during the selected period, with their main metadata (status, date, type, etc.).
-{% img src="../images/DataExport/data_export/image59.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/DataExport/data_export/export 1.png" alt="Global dashboard" width="1100" withLightbox=true %}
 {% /img %}
 ---
 
@@ -37,7 +37,7 @@ The operations export follows the same logic as counterparty export, with one di
   depending on the selected export type.
 
 > 📅 Example: to get operations signed between October 1 and October 31, enter those two dates in the filter fields.
-{% img src="../images/DataExport/data_export/image60.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/DataExport/data_export/Export 2.png" alt="Global dashboard" width="1100" withLightbox=true %}
 {% /img %}
 ---
 

@@ -37,7 +37,7 @@ Each section covers:
 - [Scoring](./LCB_FT/scoring.md)
 - [Screening](./LCB_FT/screening.md)
 - [Periodic review](./LCB_FT/revue_periodique.md)
-- [Scoring settings matrix](./LCB_FT/settings_matrice.md)
+- [Settings matrix](./LCB_FT/settings_matrice.md)
 
 ---
 
@@ -50,7 +50,7 @@ Each section covers:
 - [Signature workflows](./Souscriptions/workflows_signature.md)
 - [Subscription statuses](./Souscriptions/subscription_statuts.md)
 - [Automatic suitability](./Souscriptions/suitability.md)
-- [Agreement module](./Souscriptions/convention.md)
+- [Convention module](./Souscriptions/convention.md)
 - [Depositary access](./Souscriptions/acces_depositaire.md)
 - [Additional information](./Souscriptions/informations_complementaires.md)
 - [Create multiple subscriptions for one investor](./Souscriptions/creer_plusieurs_souscriptions.md)

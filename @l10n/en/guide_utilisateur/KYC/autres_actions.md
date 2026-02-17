@@ -4,7 +4,7 @@
 
 ## 🎯 Advanced features available from the **“...”** button
 
-The following features are available from the contextual menu (**three dots**) at the top-right of the counterparty record:
+The following features are available from the contextual menu (**three dots**) at the top-right of the counterparty file:
 
 ---
 
@@ -15,12 +15,12 @@ Useful for archiving or sharing with other stakeholders.
 ---
 
 ### 👥 Change owner or assignee  
-Lets you **change the owner** or **assignee** of a record, for example after staff changes or internal reassignment.
+Lets you **change the owner** or **assignee** of a file, for example after staff changes or internal reassignment.
 
 ---
 
 ### 🕵️‍♀️ Audit trail  
-Provides **full traceability** of actions performed on the record:  
+Provides **full traceability** of actions performed on the file:  
 - Changes made  
 - Responses updated  
 - Timestamp and author for each change
@@ -28,10 +28,10 @@ Provides **full traceability** of actions performed on the record:
 ---
 
 ### 🏛️ INPI search  
-Lets you **link a manually created record** to an **INPI-derived record** in progress using the **RCS number**.  
+Lets you **link a manually created file** to an **INPI-derived file** in progress using the **RCS number**.  
 This helps synchronize and verify legal information.
 
 ---
 
-{% img src="../images/KYC/autres_actions/image12.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/KYC/autres_actions/INIP.png" alt="Global dashboard" width="300" withLightbox=true %}
 {% /img %}

@@ -9,7 +9,7 @@ sidebar.userGuide: User guide
 sidebar.userGuide.kyc: KYC
 sidebar.userGuide.kyc.dashboardGlobal: Dashboard overview
 sidebar.userGuide.kyc.counterpartyCreation: Create a counterparty
-sidebar.userGuide.kyc.sendCounterpartyForm: Send form to the counterparty
+sidebar.userGuide.kyc.sendCounterpartyForm: Send the file to the counterparty
 sidebar.userGuide.kyc.statuses: Statuses
 sidebar.userGuide.kyc.documents: Documents
 sidebar.userGuide.kyc.otherActions: Other actions
@@ -29,7 +29,7 @@ sidebar.userGuide.subscriptions.distributorAccess: Distributor access
 sidebar.userGuide.subscriptions.signatureWorkflows: Signature workflows
 sidebar.userGuide.subscriptions.statuses: Subscription statuses
 sidebar.userGuide.subscriptions.suitability: Suitability
-sidebar.userGuide.subscriptions.agreement: Agreement
+sidebar.userGuide.subscriptions.agreement: Convention
 sidebar.userGuide.subscriptions.depositaryAccess: Depositary access
 sidebar.userGuide.subscriptions.additionalInformation: Additional information
 sidebar.userGuide.subscriptions.createMultiple: Create multiple subscriptions

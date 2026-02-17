@@ -8,9 +8,9 @@
 The **Documents** section is fully customizable.
 
 - **Standard documents** are integrated by default at installation.  
-- You can **manually add** documents specific to each record.  
+- You can **manually add** documents specific to each file.  
 - You can also **download all documents attached to the record**.
-{% img src="../images/KYC/documents/image11.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/KYC/documents/global view.png" alt="Global dashboard" width="1100" withLightbox=true %}
 {% /img %}
 
 ---

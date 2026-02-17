@@ -59,8 +59,8 @@ These elements ensure **full traceability** and **document compliance** for each
 - 🔐 **Secure access** for validated external partners.
 
 ---
-{% img src="../images/Souscriptions/acces_depositaire/image57.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/Souscriptions/acces_depositaire/Depository 1.png" alt="Global dashboard" width="1100" withLightbox=true %}
 {% /img %}
-{% img src="../images/Souscriptions/acces_depositaire/image58.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/Souscriptions/acces_depositaire/Depository 2.png" alt="Global dashboard" width="1100" withLightbox=true %}
 {% /img %}
 > 💡 *Depositary access is designed to meet custodian banks' compliance and audit needs while simplifying retrieval and verification of finalized files.*

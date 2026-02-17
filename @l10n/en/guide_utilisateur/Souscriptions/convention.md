@@ -6,25 +6,25 @@
 
 ## 🎯 Module objective
 
-The B4Finance **Agreements module** lets you **manage contractual agreements** between the management company and its distributors.  
+The B4Finance **Conventions module** lets you **manage contractual coventions** between the asset management company and its distributors.  
 It is a **central tool** to secure, automate, and track the contracting process.
 
 ---
 
 ## 🧩 What the module is for
 
-The Agreements module centralizes all **distribution agreements** and their **amendments**, while ensuring:
-- **status tracking** (Draft, In signature, Validated, etc.),  
-- **full traceability** of the contracting process,  
-- and **retention of signed and validated documents**.
+The conventions module centralizes all **distribution agreements** and their **amendments**, while ensuring:
+- **Status tracking** (Draft, In signature, Validated, etc.),  
+- **Full traceability** of the contracting process,  
+- **Retention of signed and validated documents**.
 
 ### 💡 This module makes it easier to:
-- **create and send** agreements to distributors,  
-- **collect missing information** (contact details, legal data, supporting documents),  
-- **track signatures and validations**,  
-- **classify and consult** completed agreements.
+- **Create and send** agreements to distributors,  
+- **Collect missing information** (contact details, legal data, supporting documents),  
+- **Track signatures and validations**,  
+- **Classify and consult** completed agreements.
 
-> In short, the Agreements module is the **central tool for managing contractual relationships** between the management company and its distributors.
+> In short, the conventions module is the **central tool for managing contractual relationships** between the asset management company and its distributors.
 
 ---
 
@@ -37,13 +37,13 @@ It provides a synthetic view of key information:
 
 | **Field** | **Description** |
 |------------|----------------|
-| **ID / Contract type** | Agreement or amendment |
-| **Relevant share class** | Example: Fund 1 - Share A |
-| **Contract status** | Draft, Sent, In signature, Validated |
-| **Distributor** | Distributor name and completion status (“To complete”, “Approved”, etc.) |
+| **ID / Type of contract** | Agreement or amendment |
+| **Share class name** | Example: Fund 1 - Share A |
+| **Agreement status** | Draft, Sent, In signature, Validated |
+| **Distributor name** | Distributor name and completion status (“To complete”, “Approved”, etc.) |
 | **Operation group** | Group linked to the agreement |
 | **Distribution country** | Relevant geographical area |
-| **Creation date** | Date the agreement was added to the system |
+| **Date of Incorporation** | Date the agreement was added to the system |
 
 A **filtering system** lets you sort agreements:
 - by **fund**, **share class**, or **distributor**,  
@@ -55,7 +55,7 @@ A **filtering system** lets you sort agreements:
 
 From the **dashboard**, users can click **“Add contract”**.  
 They then select:
-- the **contract type**: *Agreement* or *Amendment*,  
+- the **type of agreement**: *Agreement* or *Amendment*,  
 - the **relevant fund share class**,  
 - the **target distributor**.
 
@@ -95,6 +95,6 @@ The **contract status** evolves automatically based on process progress:
 | Final verification | Validated |
 
 Teams can:
-- **monitor progress in real time**,  
-- **verify signatures**,  
-- **automatically archive finalized contracts**.
+- **Monitor progress in real time**,  
+- **Verify signatures**,  
+- **Automatically archive finalized contracts**.

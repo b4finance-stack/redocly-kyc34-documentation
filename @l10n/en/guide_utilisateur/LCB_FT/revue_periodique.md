@@ -5,9 +5,9 @@
 **Periodic review**, also called *remediation*, is the process of **regularly updating** investor files (distributors, service providers, etc.).  
 It ensures that collected information and documents remain **compliant with regulatory requirements** and **AML/CFT obligations**.
 
-On the platform, the **next review date** is visible directly in the **investor record**.
+On the platform, the **next review date** is visible directly in the **investor file**.
 
-{% img src="../images/LCB FT/revue_periodique/image22.png" alt="Next review date in the investor record" width="1100" withLightbox=true %}
+{% img src="../images/LCB FT/revue_periodique/revue.png" alt="Next review date in the investor record" width="500" withLightbox=true %}
 {% /img %}
 
 ---

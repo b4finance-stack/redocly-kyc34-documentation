@@ -14,7 +14,7 @@ The creation process is **the same for all counterparty categories**.
 
 Click the **“Add investor”** button in the top-right corner of the page.
 
-{% img src="../images/KYC/creation_contrepartie/image4.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/KYC/creation_contrepartie/ajouter.png" alt="Global dashboard" width="1100" withLightbox=true %}
 {% /img %}
 
 ---
@@ -24,20 +24,20 @@ Click the **“Add investor”** button in the top-right corner of the page.
 Complete the first creation window by filling in the **basic information**, then click **“Save”**.
 
 
-{% img src="../images/KYC/creation_contrepartie/image5.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/KYC/creation_contrepartie/basic info.png" alt="Global dashboard" width="1100" withLightbox=true %}
 {% /img %}
 ---
 
-### 3️⃣ Complete the counterparty record
+### 3️⃣ Complete the counterparty file
 
-Once saved, the record opens automatically.  
-You can then complete the different record **sections**.
+Once saved, the file opens automatically.  
+You can then complete the different file **sections**.
 
 ---
 
 ## 🗂️ Section description
 
-### 🔹 Record
+### 🔹File
 Contains the **standard information** shared across the platform.  
 Questions displayed in this section are **preconfigured by default**.
 
@@ -50,12 +50,10 @@ This section is **customizable** based on client needs and requirements.
 ---
 
 ### 🔹 Contract
-Available only if **Subscription (investor)** or **Agreement (distributor)** modules are enabled.  
+Available only if **Subscription (investor)** or **Convention (distributor)** modules are enabled.  
 It provides access to **related contracts**.  
-Contracts and **signature proof documents** can be downloaded from this section using the 👁️ icon.
+Contracts and **signature proof documents** can be downloaded from this section.
 
-{% img src="../images/KYC/creation_contrepartie/image6.png" alt="Global dashboard" width="300" withLightbox=true %}
-{% /img %}
 
 ---
 
@@ -68,6 +66,9 @@ This includes supporting documents and files uploaded by users.
 ### 🔹 Relations
 Lets you **view all relations** linked to an entity.  
 You can quickly find the **record of a third party** (e.g., related company, distributor, etc.).
+
+{% img src="../images/KYC/creation_contrepartie/relations.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% /img %}
 
 ---
 

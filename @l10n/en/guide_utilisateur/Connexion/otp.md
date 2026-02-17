@@ -14,8 +14,8 @@ This guide explains the rules for using an OTP (*One-Time Password*) in the auth
 Once generated and sent, an OTP code remains **valid for 15 minutes**.
 
 After that:
-- the code can no longer be used;
-- the user must **generate a new code** to log in again.
+- The code can no longer be used;
+- The user must **generate a new code** to log in again.
 
 > ⚠️ **Warning:** Expired codes cannot be reactivated.  
 > A new OTP must always be requested.
@@ -27,10 +27,10 @@ After that:
 An OTP code is generated **only on the first click** on the *magic link*.
 
 If you click the same link again:
-- a new code **will not be resent automatically**;
-- you must **explicitly request a resend** to receive a new code.
+- A new code **will not be resent automatically**;
+- You must **explicitly request a resend** to receive a new code.
 
-> 💡 **Good to know:** The *magic link* can be used only once to generate an active OTP.
+> 💡 **Good to know:** The *Magic link* can be used only once to generate an active OTP.
 
 ---
 

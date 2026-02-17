@@ -10,8 +10,8 @@ Once your instance is configured, it is **normal for needs to evolve over time**
 Good news: your environment can be **customized and adjusted at any time** to fit your specific use cases.
 
 Change requests can be sent to:
-- your **Account Manager**, or  
-- the **Support** team: [support@b4finance.com](mailto:support@b4finance.com)
+- Your **Account Manager**, or  
+- The **Support** team: [support@b4finance.com](mailto:support@b4finance.com)
 
 ---
 
@@ -71,8 +71,8 @@ mte2._domainkey.xx.com → dkim2.mandrillapp.com
 ## ✅ Objective
 
 These records ensure:
-- secure authentication of outgoing emails,
-- better message deliverability,
-- compliance of your domain with professional sending policies.
+- Secure authentication of outgoing emails,
+- Better message deliverability,
+- Compliance of your domain with professional sending policies.
 
 > 💡 Once DNS records are created, full verification propagation can take up to **48 hours**.

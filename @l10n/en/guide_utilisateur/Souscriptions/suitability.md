@@ -14,7 +14,7 @@ This mechanism automates part of regulatory validation and simplifies subscripti
 ## ⚙️ How it works
 
 Automatic suitability relies on **initial configuration**:
-- Each questionnaire question is linked to one or more **responses considered compliant**.
+- Each questionnaire question is linked to one or more **responses considered to be compliant**.
 - Other responses are **flagged as non-compliant** and trigger a manual review step.
 
 ---
@@ -25,8 +25,8 @@ When the investor completes the subscription questionnaire, two options appear a
 
 ### 🔍 Send for review
 - Responses **do not all match** expected values.  
-- The file is sent to the **management company** for review.  
-- The management company decides whether the subscription can be **accepted despite deviations**.
+- The file is sent to the **asset management company** for review.  
+- The asset management company decides whether the subscription can be **accepted despite the discrepancies**.
 
 ### ✍️ Sign
 - Responses are considered **compliant** according to configuration.  
@@ -44,7 +44,7 @@ Configuration is done in two steps:
    - Enable the module and define the analysis model.  
    - Link with existing questionnaires.
 
-2. **Define expected answers (management company)**  
+2. **Define expected answers (asset management company)**  
    - For each question, compliant answers are set manually.  
    - See the **SETTINGS** section for configuration details.
 
@@ -87,10 +87,10 @@ Once all sections are reviewed:
 - **Validation**: a **signature email** is immediately sent to signers.  
 - **Rejection**: the subscription automatically moves to **Rejected** status.
 
-{% img src="../images/Souscriptions/suitability/image55.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/Souscriptions/suitability/Suitability .png" alt="Global dashboard" width="1100" withLightbox=true %}
 {% /img %}
 
-{% img src="../images/Souscriptions/suitability/image56.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/Souscriptions/suitability/suitability analyse.png" alt="Global dashboard" width="1100" withLightbox=true %}
 {% /img %}
 
 > 💡 *This module automates compliance management while keeping human validation for edge cases. It is a key step in the subscription process for management companies.*

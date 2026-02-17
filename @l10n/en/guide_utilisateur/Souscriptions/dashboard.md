@@ -7,7 +7,7 @@ You can monitor contract status in real time:
 - **Sent for signature**: contracts sent to investors  
 - **Signed by investor**: contracts signed by the investor  
 - **Completed subscriptions**: finalized subscriptions
-{% img src="../images/Souscriptions/dashboard/image27.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/Souscriptions/dashboard/subscription dashboard.png" alt="Global dashboard" width="1100" withLightbox=true %}
 {% /img %}
 ---
 
@@ -18,7 +18,7 @@ Each user can customize table display by selecting columns to show:
 - Fund name  
 - Share class  
 - Operation status  
-- Investor type  
+- Type of investor  
 - Investor name  
 - Operation group  
 - Distribution country  

@@ -4,15 +4,13 @@
 
 **Screening** is available from the **AML/CFT section**, in the **Screening** tab.
 
-{% img src="../images/LCB FT/screening/image17.png" alt="Global dashboard" width="1100" withLightbox=true %}
-{% /img %}
-{% img src="../images/LCB FT/screening/image18.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/LCB FT/screening/screening.png" alt="Global dashboard" width="1100" withLightbox=true %}
 {% /img %}
 
 All **third parties** linked to a counterparty are screened.  
 However, the results of these screenings contribute to the **overall risk** of the main counterparty.
 
-To view detailed screening for each third party, go to the counterparty's **main record**.
+To view detailed screening for each third party, go to the counterparty's **main file**.
 
 ---
 
@@ -20,9 +18,9 @@ To view detailed screening for each third party, go to the counterparty's **main
 
 Screening is used to **automatically check** individuals, legal entities, and funds registered on the platform to identify sensitive information related to:
 
-- **sanctions lists**,  
-- **high-risk profiles (PEP)**,  
-- **negative reputation indicators (adverse media)**.
+- **Sanctions Lists**,  
+- **High-risk Profiles (PEP)**,  
+- **Negative Reputation Indicators (adverse media)**.
 
 ---
 
@@ -55,7 +53,7 @@ Regardless of the provider, these rules are common:
 
 ## Managing matches (select or reject)
 
-When a **match** appears, it is shown as an individual record.
+When a **match** appears, it is shown as an individual file.
 
 ### 🔍 Verification
 You can open the **screening report** to confirm related information.
@@ -65,7 +63,7 @@ You can open the **screening report** to confirm related information.
 2. Click **Confirm match**.  
 
 {% admonition type="warning" %}
-The investor record must be in **Collecting** status; otherwise, the *Confirm match* button remains disabled.
+The investor file must be in **Collecting** status; otherwise, the *Confirm match* button remains  disabled.
 {% /admonition %}
 
 This action is **reversible** through the **Reset** button.
@@ -78,20 +76,16 @@ This action is **reversible** through the **Reset** button.
 
 ## History and manual changes
 
-Each record has a **screening history** tracking all actions.
+Each file has a **screening history** tracking all actions.
 
-{% img src="../images/LCB FT/screening/image19.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/LCB FT/screening/Match.png" alt="Global dashboard" width="1100" withLightbox=true %}
 {% /img %}
 
 The detail of each criterion is **viewable and manually editable**, which directly impacts the **overall scoring**.
 
-{% img src="../images/LCB FT/screening/image20.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/LCB FT/screening/Match .png" alt="Global dashboard" width="1100" withLightbox=true %}
 {% /img %}
 ---
-
-## What's new - V2 integration (MemberCheck & Dow Jones)
-
-The new **V2 integration**, available for *MemberCheck* and *Dow Jones*, adds advanced features for better monitoring.
 
 ### ✉️ Automatic notifications
 
@@ -102,8 +96,8 @@ Every morning, two emails are sent to authorized users:
 
 ### 📊 Operational monitoring on the platform
 
-- A **“New match”** column in the pipeline lets you quickly filter records with new matches.  
-- The record **history** logs daily **changes related to screening data**.
+- A **“New match”** column in the pipeline lets you quickly filter files with new matches.  
+- The file **history** logs daily **changes related to screening data**.
 
-{% img src="../images/LCB FT/screening/image21.png" alt="Global dashboard" width="1100" withLightbox=true %}
+{% img src="../images/LCB FT/screening/monitoring.png" alt="Global dashboard" width="1100" withLightbox=true %}
 {% /img %}

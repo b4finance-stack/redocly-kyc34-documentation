@@ -1,6 +1,6 @@
 # 👩‍💼 Operator access
 
-**Operator access** allows users to view all subscriptions (depending on granted permissions), monitor their progress, and access investors' **KYC** records.
+**Operator access** allows users to view all subscriptions (depending on granted permissions), monitor their progress, and access investors' **KYC** files.
 
 The operator can act at different levels:
 
@@ -16,10 +16,10 @@ Each subscription follows a defined path, from creation to final signature.
 
 Two modules are available for subscription management:
 
-- **Subscription monitoring**: lets you view all subscriptions, whether direct or indirect (those owned by a distributor).  
+- **Subscription follow-up**: lets you view all subscriptions, whether direct or indirect (those owned by a distributor).  
 - **Subscriptions**: lets you view only direct-sale subscriptions and create new subscriptions as an operator.
 
-{% img src="../images/Souscriptions/acces_operateur/image28.png" alt="Global dashboard" width="1100" withLightbox=true /%}
+{% img src="../images/Souscriptions/acces_operateur/sidebar.png" alt="Global dashboard" width="500" withLightbox=true /%}
 
 ---
 
@@ -32,7 +32,7 @@ To create a new subscription:
 1. Go to the **Direct Sales** module.  
 2. Click **Add subscription**.
 
-{% img src="../images/Souscriptions/acces_operateur/image29.png" alt="Global dashboard" width="1100" withLightbox=true /%}
+{% img src="../images/Souscriptions/acces_operateur/ajouter sus.png" alt="Global dashboard" width="1100" withLightbox=true /%}
 
 ---
 
@@ -47,7 +47,7 @@ A first modal window opens to enter the main subscription information.
 
 💡 The search engine provides suggestions from the first letters entered.
 
-{% img src="../images/Souscriptions/acces_operateur/image30.png" alt="Investor selection" width="1100" withLightbox=true /%}
+{% img src="../images/Souscriptions/acces_operateur/fichier sus.png" alt="Investor selection" width="1100" withLightbox=true /%}
 
 ---
 
@@ -60,9 +60,9 @@ To share the subscription with the investor, **two fields are mandatory** for th
 - Investor **email address**  
 - **Entry fees**
 
-Once this information is entered, the **Share** button (top-right) becomes available.
+Once this information is entered, the **Send** button (top-right) becomes available.
 
-{% img src="../images/Souscriptions/acces_operateur/image31.png" alt="Subscription questionnaire" width="1100" withLightbox=true /%}
+{% img src="../images/Souscriptions/acces_operateur/SEND.png" alt="Subscription questionnaire" width="1100" withLightbox=true /%}
 
 Information in the **Investor** and **Suitability** sections is copied to the *Diligence* record and is **shared across all funds**.  
 Information in the **Subscription** section is **fund-specific** and can be customized independently.
@@ -73,7 +73,7 @@ Information in the **Subscription** section is **fund-specific** and can be cust
 
 Before sending, you can **preview the subscription form** using the **Other actions** button or by going to the **Finalize** step.
 
-{% img src="../images/Souscriptions/acces_operateur/image32.png" alt="Subscription form preview" width="1100" withLightbox=true /%}
+{% img src="../images/Souscriptions/acces_operateur/send to analyse.png" alt="Subscription form preview" width="1100" withLightbox=true /%}
 
 ---
 
@@ -92,21 +92,20 @@ When the subscription status is **“sent to investor”**, it means:
 
 As explained above, you can link a **new subscription** to an **existing investor**.
 
-In most cases, this investor's **KYC** record is already **Approved**.
+In most cases, this investor's **KYC** file is already **Approved**.
 
 The **Investor** and **Suitability** sections then appear as **validated** and **read-only** (greyed out).
 
-{% img src="../images/Souscriptions/acces_operateur/image33.png" alt="Existing investor" width="1100" withLightbox=true /%}
 
 ---
 
-## ✏️ Update investor record
+## ✏️ Update investor file
 
-If you want to update the investor record:
+If you want to update the investor file:
 
 1. Click **Edit investor**.  
 2. Fields become editable again.  
-3. The record status automatically returns to **Collecting**.
+3. The file status automatically returns to **Collecting**.
 
 ---
 
@@ -119,5 +118,5 @@ This information is needed to:
 - either **send the data back to the operator** for verification,  
 - or **sign the subscription directly** at the end of the flow.
 
-{% img src="../images/Souscriptions/acces_operateur/image34.png" alt="Investor completion" width="1100" withLightbox=true /%}
-{% img src="../images/Souscriptions/acces_operateur/image35.png" alt="Investor signature" width="1100" withLightbox=true /%}
+{% img src="../images/Souscriptions/acces_operateur/access investiseur.png" alt="Investor completion" width="1100" withLightbox=true /%}
+

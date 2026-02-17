@@ -9,10 +9,10 @@ The table below summarizes **available platform actions** and the **required per
 
 | **Actions** | **Required permissions** |
 |--------------|------------------|
-| Create records | Collecting |
-| Edit records | Collecting |
-| Approve records | Approval |
-| Edit record owner and assignee | Admin |
+| Create files | Collecting |
+| Edit files | Collecting |
+| Approve files | Approval |
+| Edit file owner and assignee | Admin |
 | View Screening / Scoring | Analysis, Approval |
 | Manually edit Screening / Scoring | Analysis, Approval |
 | Access settings | Admin |

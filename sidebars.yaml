@@ -1,24 +1,3 @@
-- group: Documentation
-  groupTranslationKey: sidebar.documentation
-  page: documentation/index.md
-  items:
-    - page: documentation/entity.md
-      label: Entity
-      labelTranslationKey: sidebar.documentation.entity
-    - page: documentation/due_diligence_workflow.md
-      label: Due diligence workflow
-      labelTranslationKey: sidebar.documentation.dueDiligenceWorkflow
-    - page: documentation/subscription_workflow.md
-      label: Subscription workflow
-      labelTranslationKey: sidebar.documentation.subscriptionWorkflow
-    - page: documentation/distribution_agreement.md
-      label: Distribution agreement
-      labelTranslationKey: sidebar.documentation.distributionAgreement
-
-- group: API Reference
-  groupTranslationKey: sidebar.apiReference
-  page: apis/index.yaml
-
 - group: Guide utilisateur
   groupTranslationKey: sidebar.userGuide
   page: guide_utilisateur/index.md
@@ -132,3 +111,24 @@
           label: Règles d’utilisation d’un OTP
           labelTranslationKey: sidebar.userGuide.connection.otpRules
 
+
+- group: Documentation
+  groupTranslationKey: sidebar.documentation
+  page: documentation/index.md
+  items:
+    - page: documentation/entity.md
+      label: Entity
+      labelTranslationKey: sidebar.documentation.entity
+    - page: documentation/due_diligence_workflow.md
+      label: Due diligence workflow
+      labelTranslationKey: sidebar.documentation.dueDiligenceWorkflow
+    - page: documentation/subscription_workflow.md
+      label: Subscription workflow
+      labelTranslationKey: sidebar.documentation.subscriptionWorkflow
+    - page: documentation/distribution_agreement.md
+      label: Distribution agreement
+      labelTranslationKey: sidebar.documentation.distributionAgreement
+
+- group: API Reference
+  groupTranslationKey: sidebar.apiReference
+  page: apis/index.yaml
