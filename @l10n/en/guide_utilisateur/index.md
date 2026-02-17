@@ -18,7 +18,7 @@ Each section covers:
 ## 📋 Guide Structure
 
 ### 🧾 KYC
-> Manage counterparty records, related documents, and internal validations.
+> Manage counterparty files, related documents, and internal validations.
 
 - [Global dashboard view](./KYC/dashboard_vue_globale_et_personnalisable.md)
 - [Create a counterparty](./KYC/creation_contrepartie.md)
