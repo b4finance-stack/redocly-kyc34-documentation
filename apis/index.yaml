@@ -10,6 +10,11 @@
       "description": "Generated server url"
     }
   ],
+  "security": [
+    {
+      "bearer_token": []
+    }
+  ],
   "tags": [
     {
       "name": "Authentication",
@@ -71,8 +76,8 @@
                   }
                 },
                 "required": [
-                  "client_secret",
                   "client_id",
+                  "client_secret",
                   "grant_type"
                 ]
               }
@@ -121,32 +126,38 @@
             "in": "query",
             "description": "Results page you want to retrieve (0..N)",
             "required": false,
-            "x-example": 0,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "x-example": 0
           },
           {
             "name": "size",
             "in": "query",
             "description": "Number of records per page",
             "required": false,
-            "x-example": 20,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "x-example": 20
           },
           {
             "name": "sort",
             "in": "query",
             "description": "Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Sort criteria are risk, createdDate, updatedDate, name, personType, companyType, externalId, email",
             "required": false,
-            "x-example": "createdDate,desc",
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "string"
-            }
+            },
+            "x-example": "createdDate,desc"
           }
         ],
         "requestBody": {
@@ -186,28 +197,34 @@
             "in": "query",
             "description": "Results page you want to retrieve (0..N)",
             "required": false,
-            "x-example": 0,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "x-example": 0
           },
           {
             "name": "size",
             "in": "query",
             "description": "Number of records per page",
             "required": false,
-            "x-example": 20,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "x-example": 20
           },
           {
             "name": "sort",
             "in": "query",
             "description": "Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Sort criteria are risk, createdDate, updatedDate, name, personType, companyType, externalId, email",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "string"
             }
@@ -250,6 +267,8 @@
             "in": "path",
             "description": "personId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -281,6 +300,8 @@
             "in": "path",
             "description": "personId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -322,6 +343,8 @@
             "in": "path",
             "description": "personId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -365,28 +388,34 @@
             "in": "query",
             "description": "Results page you want to retrieve (0..N)",
             "required": false,
-            "x-example": 0,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "x-example": 0
           },
           {
             "name": "size",
             "in": "query",
             "description": "Number of records per page",
             "required": false,
-            "x-example": 20,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "x-example": 20
           },
           {
             "name": "sort",
             "in": "query",
             "description": "Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Multiple sort criteria are supported.",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "string"
             }
@@ -396,6 +425,8 @@
             "in": "path",
             "description": "partyType",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "enum": [
@@ -445,6 +476,8 @@
             "in": "path",
             "description": "partyType",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "enum": [
@@ -494,6 +527,8 @@
             "in": "query",
             "description": "computeProgress",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "boolean"
             }
@@ -503,6 +538,8 @@
             "in": "path",
             "description": "partyType",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "enum": [
@@ -519,6 +556,8 @@
             "in": "path",
             "description": "personId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -539,6 +578,75 @@
         }
       }
     },
+    "/service-person/v1/persons/{personId}/{partyType}/answers": {
+      "post": {
+        "tags": [
+          "Party"
+        ],
+        "summary": "Add multiple answers for the selected party",
+        "operationId": "addAllAnswersByPersonIdUsingPOST",
+        "parameters": [
+          {
+            "name": "partyType",
+            "in": "path",
+            "description": "partyType",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ASSET",
+                "CLIENT",
+                "DISTRIBUTOR",
+                "GENERAL_PARTNER",
+                "SERVICE_PROVIDER"
+              ]
+            }
+          },
+          {
+            "name": "personId",
+            "in": "path",
+            "description": "personId",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AnswerRequestDTO"
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AnswerLightDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/service-person/v1/persons/{personId}/{partyType}/answers/all": {
       "get": {
         "tags": [
@@ -552,6 +660,8 @@
             "in": "path",
             "description": "personId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -562,6 +672,8 @@
             "in": "path",
             "description": "partyType",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "enum": [
@@ -603,6 +715,8 @@
             "name": "personId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -612,6 +726,8 @@
             "name": "isPrivate",
             "in": "query",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "boolean"
             }
@@ -646,6 +762,8 @@
             "name": "isPrivate",
             "in": "query",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "boolean"
             }
@@ -654,6 +772,8 @@
             "name": "personId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -680,6 +800,8 @@
             "in": "path",
             "description": "relatedPersonId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -690,6 +812,8 @@
             "in": "path",
             "description": "relationType, request body required and response body will change depending on type. base relations are: administrators, ubos, contacts, service-providers, representatives, shareholders, vendors, lenders, buyers, coInvestor",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string"
             }
@@ -800,6 +924,8 @@
             "in": "path",
             "description": "relatedPersonId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -810,6 +936,8 @@
             "in": "path",
             "description": "relationType, request body required and response body will change depending on type. base relations are: administrators, ubos, contacts, service-providers, representatives, shareholders, vendors, lenders, buyers, coInvestor",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string"
             }
@@ -819,6 +947,8 @@
             "in": "path",
             "description": "relationId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -928,6 +1058,8 @@
             "in": "path",
             "description": "relatedPersonId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -938,6 +1070,8 @@
             "in": "path",
             "description": "relationType, request body required and response body will change depending on type. base relations are: administrators, ubos, contacts, service-providers, representatives, shareholders, vendors, lenders, buyers, coInvestor",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string"
             }
@@ -947,6 +1081,8 @@
             "in": "path",
             "description": "relationId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -973,6 +1109,8 @@
             "in": "path",
             "description": "relatedPersonId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -983,6 +1121,8 @@
             "in": "path",
             "description": "relationType, request body required and response body will change depending on type. \"any\" can be used to get all of them. base relations are: administrators, ubos, contacts, service-providers, representatives, shareholders, vendors, lenders, buyers, coInvestor",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string"
             },
@@ -1019,6 +1159,8 @@
             "in": "path",
             "description": "relatedPersonId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1029,6 +1171,8 @@
             "in": "path",
             "description": "relationType, request body required and response body will change depending on type. \"any\" can be used to get all of them. base relations are: administrators, ubos, contacts, service-providers, representatives, shareholders, vendors, lenders, buyers, coInvestor",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string"
             },
@@ -1065,6 +1209,8 @@
             "in": "path",
             "description": "personId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1075,6 +1221,8 @@
             "in": "path",
             "description": "relatedPersonId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1085,6 +1233,8 @@
             "in": "query",
             "description": "relationTypes",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "array",
               "items": {
@@ -1135,6 +1285,8 @@
             "in": "path",
             "description": "relatedPersonId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1145,6 +1297,8 @@
             "in": "path",
             "description": "relationId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1165,6 +1319,57 @@
         }
       }
     },
+    "/service-person/v1/persons/{personId}/relation/answers": {
+      "post": {
+        "tags": [
+          "Relations"
+        ],
+        "summary": "Add multiple answers with relationId for the selected person",
+        "operationId": "addAllAnswersWithRelationIdByPersonIdUsingPOST",
+        "parameters": [
+          {
+            "name": "personId",
+            "in": "path",
+            "description": "personId",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AnswerRelationRequestDTO"
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AnswerLightDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/service-document/v1/persons/{personId}/relations/{relationId}": {
       "get": {
         "tags": [
@@ -1177,6 +1382,8 @@
             "name": "isPrivate",
             "in": "query",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "boolean",
               "default": false
@@ -1186,6 +1393,8 @@
             "name": "personId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1195,6 +1404,8 @@
             "name": "relationId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1228,6 +1439,8 @@
             "name": "personId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1237,6 +1450,8 @@
             "name": "relationId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1279,6 +1494,8 @@
             "name": "personId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1288,6 +1505,8 @@
             "name": "relationId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1297,6 +1516,8 @@
             "name": "isPrivate",
             "in": "query",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "boolean"
             }
@@ -1322,6 +1543,8 @@
             "in": "query",
             "description": "filterOpened",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "boolean",
               "default": true
@@ -1332,6 +1555,8 @@
             "in": "query",
             "description": "visibleExternal",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "boolean"
             }
@@ -1396,6 +1621,8 @@
             "in": "path",
             "description": "fundPersonId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1429,6 +1656,8 @@
             "in": "path",
             "description": "fundPersonId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1472,6 +1701,8 @@
             "in": "query",
             "description": "filterOpened",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "boolean",
               "default": true
@@ -1482,6 +1713,8 @@
             "in": "query",
             "description": "visibleExternal",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "boolean"
             }
@@ -1517,6 +1750,8 @@
             "in": "path",
             "description": "fundPersonId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1560,6 +1795,8 @@
             "in": "path",
             "description": "fundPersonId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1570,6 +1807,8 @@
             "in": "path",
             "description": "partId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1601,6 +1840,8 @@
             "in": "path",
             "description": "fundPersonId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1611,6 +1852,8 @@
             "in": "path",
             "description": "partId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1654,32 +1897,38 @@
             "in": "query",
             "description": "Results page you want to retrieve (0..N)",
             "required": false,
-            "x-example": 0,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "x-example": 0
           },
           {
             "name": "size",
             "in": "query",
             "description": "Number of records per page",
             "required": false,
-            "x-example": 20,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "x-example": 20
           },
           {
             "name": "sort",
             "in": "query",
             "description": "Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. \n Criteria supported are : name, personName(same key as name), firstName, ownerClientName, assigneeClientName, teamName, createdDate, updatedDate, status, amount, signatureDate, suitability, id",
             "required": false,
-            "x-example": "createdDate,desc",
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "string"
-            }
+            },
+            "x-example": "createdDate,desc"
           }
         ],
         "requestBody": {
@@ -1719,6 +1968,8 @@
             "in": "path",
             "description": "personId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1729,6 +1980,8 @@
             "in": "path",
             "description": "productType",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "enum": [
@@ -1774,6 +2027,8 @@
             "in": "path",
             "description": "personId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1784,6 +2039,8 @@
             "in": "path",
             "description": "productType",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "enum": [
@@ -1796,6 +2053,8 @@
             "in": "path",
             "description": "subscriptionId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1830,6 +2089,8 @@
             "in": "path",
             "description": "personId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1840,6 +2101,8 @@
             "in": "path",
             "description": "productType",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "enum": [
@@ -1852,6 +2115,8 @@
             "in": "path",
             "description": "subscriptionId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1895,6 +2160,8 @@
             "in": "path",
             "description": "personId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1905,6 +2172,8 @@
             "in": "path",
             "description": "productType",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "enum": [
@@ -1917,6 +2186,8 @@
             "in": "path",
             "description": "subscriptionId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -1953,32 +2224,38 @@
             "in": "query",
             "description": "Results page you want to retrieve (0..N)",
             "required": false,
-            "x-example": 0,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "x-example": 0
           },
           {
             "name": "size",
             "in": "query",
             "description": "Number of records per page",
             "required": false,
-            "x-example": 0,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "integer",
               "format": "int32"
-            }
+            },
+            "x-example": 0
           },
           {
             "name": "sort",
             "in": "query",
             "description": "Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. \n Criteria supported are : createdDate, updatedDate, signatureDate, status, ownerName, teamName, name, personName (same as name), personFirstName (same as firstName), firstName, ownerDistributorName, assigneeDistributorName",
             "required": false,
-            "x-example": "createdDate,desc",
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "string"
-            }
+            },
+            "x-example": "createdDate,desc"
           }
         ],
         "requestBody": {
@@ -2018,6 +2295,8 @@
             "in": "path",
             "description": "personId of the distributor",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2061,6 +2340,8 @@
             "in": "path",
             "description": "distributionAgreementId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2071,6 +2352,8 @@
             "in": "path",
             "description": "personId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2102,6 +2385,8 @@
             "in": "path",
             "description": "distributionAgreementId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2112,6 +2397,8 @@
             "in": "path",
             "description": "personId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2155,6 +2442,8 @@
             "in": "query",
             "description": "Results page you want to retrieve (0..N)",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -2166,6 +2455,8 @@
             "in": "query",
             "description": "Number of records per page",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -2177,6 +2468,8 @@
             "in": "query",
             "description": "Sorting criteria in the format: property(,asc|desc). Default sort order is ascending. Sort criteria supported : buyerName, buyerPartyOwner, buyerPartyAssignee, operationOwner, numberOfShares, sharePrice, amount, createdDate, validationDate, buyerSignatureDate, sellerSignatureDate, sellerName, sellerParty, fund, teamName, part, eventDate.",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "string"
             },
@@ -2220,6 +2513,8 @@
             "in": "path",
             "description": "personId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2263,6 +2558,8 @@
             "in": "path",
             "description": "id",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2294,6 +2591,8 @@
             "in": "path",
             "description": "id",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2337,6 +2636,8 @@
             "in": "path",
             "description": "personId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2360,6 +2661,87 @@
         }
       }
     },
+    "/service-person/v1/persons/{personId}/{partyType}/answers/operations/{operationId}": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "Add multiple answers for the selected operation",
+        "operationId": "addAllAnswersByOperationIdUsingPOST",
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "description": "operationId",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "partyType",
+            "in": "path",
+            "description": "partyType",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ASSET",
+                "CLIENT",
+                "DISTRIBUTOR",
+                "GENERAL_PARTNER",
+                "SERVICE_PROVIDER"
+              ]
+            }
+          },
+          {
+            "name": "personId",
+            "in": "path",
+            "description": "personId",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AnswerRequestDTO"
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AnswerLightDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/service-person/v1/operations/{operationId}/answers/all": {
       "get": {
         "tags": [
@@ -2373,6 +2755,8 @@
             "in": "path",
             "description": "operationId",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2409,6 +2793,8 @@
             "in": "query",
             "description": "Filter private documents",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "boolean"
             }
@@ -2417,6 +2803,8 @@
             "name": "personId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2426,6 +2814,8 @@
             "name": "partyType",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "enum": [
@@ -2442,6 +2832,8 @@
             "name": "operationId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2451,6 +2843,8 @@
             "name": "operationType",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "enum": [
@@ -2484,6 +2878,252 @@
         }
       }
     },
+    "/v1/persons/{personId}/{partyType}/operations/{operationType}/{operationId}/{envelopeId}/paper": {
+      "post": {
+        "tags": [
+          "Operations"
+        ],
+        "summary": "Sign operation by upload a signed paper contract",
+        "operationId": "uploadPaperDocument",
+        "parameters": [
+          {
+            "name": "personId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "partyType",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "client",
+                "asset",
+                "general-partner",
+                "service-provider",
+                "distributor"
+              ]
+            }
+          },
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "operationType",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "subscriptions",
+                "distribution-agreements",
+                "transfer-ownerships",
+                "initial-contact-contracts"
+              ]
+            }
+          },
+          {
+            "name": "envelopeId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "\nMultipart form data example:\n```\n------WebKitFormBoundaryWdlBs2tAGfUfI0UI\nContent-Disposition: form-data; name=\"file\"; filename=\"dummy.pdf\"\nContent-Type: application/pdf\n\n\n------WebKitFormBoundaryWdlBs2tAGfUfI0UI\nContent-Disposition: form-data; name=\"data\"; filename=\"blob\"\nContent-Type: application/json\n\n{\"documentName\":\"dummy.pdf\",\"issuingDate\":\"2025-11-13T08:55:57.168Z\",\"date\":\"2025-11-13T08:55:57.168Z\",\"signatureDate\":\"2025-11-13\"}\n------WebKitFormBoundaryWdlBs2tAGfUfI0UI--\n```",
+          "content": {
+            "application/pdf": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                },
+                "required": [
+                  "data",
+                  "file"
+                ]
+              }
+            },
+            "image/png": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                },
+                "required": [
+                  "data",
+                  "file"
+                ]
+              }
+            },
+            "image/jpeg": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                },
+                "required": [
+                  "data",
+                  "file"
+                ]
+              }
+            },
+            "application/vnd.ms-excel": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                },
+                "required": [
+                  "data",
+                  "file"
+                ]
+              }
+            },
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                },
+                "required": [
+                  "data",
+                  "file"
+                ]
+              }
+            },
+            "application/msword": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                },
+                "required": [
+                  "data",
+                  "file"
+                ]
+              }
+            },
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                },
+                "required": [
+                  "data",
+                  "file"
+                ]
+              }
+            },
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                },
+                "required": [
+                  "data",
+                  "file"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocumentDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/service-document/v1/persons/{personId}/{partyType}/operations/{operationType}/{operationId}/export-zip": {
       "get": {
         "tags": [
@@ -2497,6 +3137,8 @@
             "in": "query",
             "description": "Filter private documents",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "boolean"
             }
@@ -2505,6 +3147,8 @@
             "name": "personId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2514,6 +3158,8 @@
             "name": "partyType",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "enum": [
@@ -2530,6 +3176,8 @@
             "name": "operationId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2539,6 +3187,8 @@
             "name": "operationType",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "enum": [
@@ -2574,6 +3224,8 @@
             "name": "email",
             "in": "query",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "string"
             }
@@ -2582,6 +3234,8 @@
             "name": "externalId",
             "in": "query",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "string"
             }
@@ -2611,6 +3265,8 @@
             "name": "sendWelcomeEmail",
             "in": "query",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "boolean"
             }
@@ -2652,6 +3308,8 @@
             "name": "userId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2684,6 +3342,8 @@
             "name": "userId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2726,6 +3386,8 @@
             "name": "pageable",
             "in": "query",
             "required": true,
+            "style": "form",
+            "explode": true,
             "schema": {
               "$ref": "#/components/schemas/UnsortedPageable"
             },
@@ -2738,6 +3400,8 @@
             "name": "name",
             "in": "query",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "string"
             }
@@ -2746,6 +3410,8 @@
             "name": "internal",
             "in": "query",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "boolean"
             }
@@ -2754,6 +3420,8 @@
             "name": "teamIds",
             "in": "query",
             "required": false,
+            "style": "form",
+            "explode": true,
             "schema": {
               "type": "array",
               "items": {
@@ -2818,6 +3486,8 @@
             "name": "teamId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2848,6 +3518,8 @@
             "name": "teamId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2888,6 +3560,8 @@
             "name": "teamId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2954,6 +3628,8 @@
             "name": "userId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -2984,6 +3660,8 @@
             "name": "userId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -3026,6 +3704,8 @@
             "name": "userId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -3035,6 +3715,8 @@
             "name": "teamId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -3058,6 +3740,8 @@
             "name": "userId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -3067,6 +3751,8 @@
             "name": "teamId",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -3081,58 +3767,8 @@
       }
     }
   },
-  "security": [
-    {
-      "bearer_token": []
-    }
-  ],
   "components": {
-    "securitySchemes": {
-      "bearer_token": {
-        "type": "http",
-        "scheme": "bearer"
-      }
-    },
     "schemas": {
-      "AnswerDTO": {
-        "type": "object",
-        "properties": {
-          "answer": {
-            "type": "string"
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "isCurrent": {
-            "type": "boolean"
-          },
-          "operationId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "party": {
-            "$ref": "#/components/schemas/PartyDTO"
-          },
-          "partyType": {
-            "type": "string",
-            "enum": [
-              "ASSET",
-              "CLIENT",
-              "DISTRIBUTOR",
-              "GENERAL_PARTNER",
-              "SERVICE_PROVIDER"
-            ]
-          },
-          "person": {
-            "$ref": "#/components/schemas/PersonDTO"
-          },
-          "question": {
-            "$ref": "#/components/schemas/QuestionDTO"
-          }
-        },
-        "title": "AnswerDTO"
-      },
       "Range": {
         "type": "object",
         "properties": {
@@ -3788,10 +4424,10 @@
           },
           "funds": {
             "type": "array",
-            "uniqueItems": true,
             "items": {
               "$ref": "#/components/schemas/DistributionAgreementFundDTO"
-            }
+            },
+            "uniqueItems": true
           },
           "id": {
             "type": "string",
@@ -4239,144 +4875,6 @@
         },
         "title": "FundLightDTO"
       },
-      "QuestionDTO": {
-        "type": "object",
-        "properties": {
-          "autoEvaluate": {
-            "type": "string"
-          },
-          "columnSpan": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "custom": {
-            "type": "boolean"
-          },
-          "disableEdit": {
-            "type": "boolean"
-          },
-          "hasAnswers": {
-            "type": "boolean"
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "key": {
-            "type": "string"
-          },
-          "label": {
-            "type": "string"
-          },
-          "mandatory": {
-            "type": "boolean"
-          },
-          "mandatoryCondition": {
-            "type": "string"
-          },
-          "numberRanges": {
-            "type": "string"
-          },
-          "optionEnum": {
-            "type": "string"
-          },
-          "optionEnumParam": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/OptionEnumParamDTO"
-            }
-          },
-          "personType": {
-            "type": "string"
-          },
-          "questionOrder": {
-            "type": "number",
-            "format": "float"
-          },
-          "subTypeList": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "CHANGEABLE_CURRENCY",
-                "DOCUMENT_OCR_SCANNING",
-                "NEGATIVE_CURRENCY"
-              ]
-            }
-          },
-          "tooltip": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "ADDRESS",
-              "ADMINISTRATOR",
-              "AUTO_EVALUATE",
-              "BUYERS",
-              "CHECKBOX",
-              "COINVESTORS",
-              "COMPONENT",
-              "CONTACT",
-              "CURRENCY",
-              "DATE",
-              "DOCUMENT",
-              "EMAIL",
-              "EXTERNAL_LINKS",
-              "IBAN",
-              "LENDERS",
-              "NUMBER",
-              "PERCENTAGE",
-              "PHONE",
-              "POPUP",
-              "RADIO",
-              "RADIO_IMAGE",
-              "RELATION",
-              "REPRESENTATIVE",
-              "SECTION",
-              "SELECT",
-              "SELECT_CUSTOM",
-              "SELECT_MULTIPLE",
-              "SELECT_RANGE",
-              "SERVICE_PROVIDER",
-              "SHAREHOLDER",
-              "SIGNED_DOCUMENT",
-              "STATIC_IMAGE",
-              "STATIC_TEXT",
-              "TABLE",
-              "TEXT",
-              "TEXTAREA",
-              "TITLE",
-              "TOOLTIP",
-              "UBO",
-              "VENDORS",
-              "YES_NO_LINK"
-            ]
-          },
-          "url": {
-            "type": "string"
-          },
-          "visibleCondition": {
-            "type": "string"
-          },
-          "visibleDistributor": {
-            "type": "boolean"
-          },
-          "visibleInvestor": {
-            "type": "boolean"
-          },
-          "visibleOperator": {
-            "type": "boolean"
-          },
-          "visibleOwnerExternal": {
-            "type": "boolean"
-          },
-          "visibleRelationTypeDocument": {
-            "type": "string"
-          }
-        },
-        "title": "QuestionDTO"
-      },
       "EnvelopeRequestDTO": {
         "type": "object",
         "properties": {
@@ -4432,6 +4930,36 @@
           }
         },
         "title": "AnswerLightDTO"
+      },
+      "AnswerRelationRequestDTO": {
+        "type": "object",
+        "properties": {
+          "answer": {
+            "type": "string"
+          },
+          "questionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "relationId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "title": "AnswerRelationRequestDTO"
+      },
+      "AnswerRequestDTO": {
+        "type": "object",
+        "properties": {
+          "answer": {
+            "type": "string"
+          },
+          "questionId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "title": "AnswerRequestDTO"
       },
       "PartyRequestDTO": {
         "type": "object",
@@ -6688,7 +7216,6 @@
           },
           "visibleOperations": {
             "type": "array",
-            "uniqueItems": true,
             "items": {
               "type": "string",
               "enum": [
@@ -6701,131 +7228,11 @@
                 "SUBSCRIPTION",
                 "TRANSFER_OWNERSHIP"
               ]
-            }
+            },
+            "uniqueItems": true
           }
         },
         "title": "PersonRequestDTO"
-      },
-      "PersonsOverviewParamsDTO": {
-        "type": "object",
-        "properties": {
-          "activeUser": {
-            "type": "boolean"
-          },
-          "nameStartWith": {
-            "type": "string"
-          },
-          "personType": {
-            "type": "string",
-            "enum": [
-              "COMPANY",
-              "INDIVIDUAL",
-              "PRODUCT"
-            ]
-          },
-          "statuses": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "ARCHIVED",
-                "TO_BE_VALIDATED",
-                "VALIDATED"
-              ]
-            }
-          }
-        },
-        "title": "PersonsOverviewParamsDTO"
-      },
-      "PersonOverviewDTO": {
-        "type": "object",
-        "properties": {
-          "createdDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "firstName": {
-            "type": "string"
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "name": {
-            "type": "string"
-          },
-          "personType": {
-            "type": "string",
-            "enum": [
-              "COMPANY",
-              "INDIVIDUAL",
-              "PRODUCT"
-            ]
-          },
-          "roles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "status": {
-            "type": "string",
-            "description": "Used for relation (thirdParties) status",
-            "enum": [
-              "ARCHIVED",
-              "TO_BE_VALIDATED",
-              "VALIDATED"
-            ]
-          }
-        },
-        "title": "PersonOverviewDTO"
-      },
-      "PageOfPersonOverviewDTO": {
-        "type": "object",
-        "properties": {
-          "content": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PersonOverviewDTO"
-            }
-          },
-          "empty": {
-            "type": "boolean"
-          },
-          "first": {
-            "type": "boolean"
-          },
-          "last": {
-            "type": "boolean"
-          },
-          "number": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "numberOfElements": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "pageable": {
-            "$ref": "#/components/schemas/SwaggerPageable"
-          },
-          "size": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "sort": {
-            "$ref": "#/components/schemas/Sort"
-          },
-          "totalElements": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "totalPages": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "title": "PageOfPersonOverviewDTO"
       },
       "PartyOverviewDTO": {
         "type": "object",
@@ -7541,111 +7948,6 @@
           }
         }
       },
-      "DocumentPersonDTO": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "name": {
-            "type": "string"
-          },
-          "firstName": {
-            "type": "string"
-          }
-        }
-      },
-      "EnvelopeRelationDTO": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "createdBy": {
-            "type": "string"
-          },
-          "createdDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "key": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "comment": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "COLLECTING",
-              "UPLOADED"
-            ]
-          },
-          "isPrivate": {
-            "type": "boolean"
-          },
-          "isDeleted": {
-            "type": "boolean"
-          },
-          "isMandatory": {
-            "type": "boolean"
-          },
-          "envelopeStatusOcr": {
-            "type": "string",
-            "enum": [
-              "ELIGIBLE",
-              "NOT_ELIGIBLE",
-              "VALIDATED",
-              "NOT_VALIDATED"
-            ]
-          },
-          "documents": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/DocumentDTO"
-            }
-          },
-          "personId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "relationId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "relationPerson": {
-            "$ref": "#/components/schemas/DocumentPersonDTO"
-          },
-          "relationType": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "SHAREHOLDER",
-                "ADMINISTRATOR",
-                "REPRESENTATIVE",
-                "UBO",
-                "CONTACT",
-                "SERVICE_PROVIDER",
-                "TRANSFEROR",
-                "CO_INVESTOR",
-                "VENDOR",
-                "LENDER",
-                "BUYER"
-              ]
-            }
-          }
-        }
-      },
       "PersonLightOverviewDTO": {
         "type": "object",
         "properties": {
@@ -8040,106 +8342,6 @@
         },
         "title": "AmountRange"
       },
-      "OperationsClientOverviewDTO": {
-        "type": "object",
-        "properties": {
-          "amount": {
-            "type": "number",
-            "format": "double"
-          },
-          "cosubscriber": {
-            "type": "boolean"
-          },
-          "createdDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "hasSideLetter": {
-            "type": "boolean"
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "numberOfPart": {
-            "type": "number",
-            "format": "double"
-          },
-          "operationId": {
-            "type": "string"
-          },
-          "operationType": {
-            "type": "string",
-            "enum": [
-              "DISTRIBUTION_AGREEMENT",
-              "ENGAGEMENT_LETTER",
-              "INITIAL_CONTACT_CONTRACT",
-              "INVESTMENT",
-              "INVESTMENT_PROPOSAL",
-              "MANDATE",
-              "SUBSCRIPTION",
-              "TRANSFER_OWNERSHIP"
-            ]
-          },
-          "owner": {
-            "$ref": "#/components/schemas/UserDTO"
-          },
-          "part": {
-            "$ref": "#/components/schemas/PartLightDTO"
-          },
-          "personId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "product": {
-            "$ref": "#/components/schemas/ProductLightDTO"
-          },
-          "productType": {
-            "type": "string",
-            "enum": [
-              "FUND",
-              "HOLDING"
-            ]
-          },
-          "sharePrice": {
-            "$ref": "#/components/schemas/AmountCurrencyDTO"
-          },
-          "signatureDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "srriOk": {
-            "type": "boolean"
-          },
-          "status": {
-            "type": "string",
-            "enum": [
-              "ABANDONED",
-              "ANALYSE",
-              "AWAITING",
-              "AWAITING_SIGNATURE",
-              "DONE",
-              "NEW",
-              "REJECTED",
-              "SIGNED",
-              "SIGNED_INVESTOR",
-              "TO_BE_APPROVE",
-              "TO_BE_SENT"
-            ]
-          },
-          "transferType": {
-            "type": "string",
-            "enum": [
-              "TRANSFER_BUY",
-              "TRANSFER_SELL"
-            ]
-          },
-          "uniquePriceOfPart": {
-            "$ref": "#/components/schemas/AmountCurrencyDTO"
-          }
-        },
-        "title": "OperationsClientOverviewDTO"
-      },
       "OperationOverviewParamsDTO": {
         "type": "object",
         "properties": {
@@ -8466,7 +8668,6 @@
           },
           "personTypes": {
             "type": "array",
-            "uniqueItems": true,
             "items": {
               "type": "string",
               "enum": [
@@ -8474,7 +8675,8 @@
                 "INDIVIDUAL",
                 "PRODUCT"
               ]
-            }
+            },
+            "uniqueItems": true
           },
           "signatureDate": {
             "$ref": "#/components/schemas/DateRange"
@@ -9754,7 +9956,6 @@
           },
           "personTypes": {
             "type": "array",
-            "uniqueItems": true,
             "items": {
               "type": "string",
               "enum": [
@@ -9762,7 +9963,8 @@
                 "INDIVIDUAL",
                 "PRODUCT"
               ]
-            }
+            },
+            "uniqueItems": true
           },
           "signatureDate": {
             "$ref": "#/components/schemas/DateRange"
@@ -10268,18 +10470,6 @@
           }
         },
         "title": "SubscriptionRequestDTO"
-      },
-      "OptionEnumParamDTO": {
-        "type": "object",
-        "properties": {
-          "apiParam": {
-            "type": "string"
-          },
-          "key": {
-            "type": "string"
-          }
-        },
-        "title": "OptionEnumParamDTO"
       },
       "ProductLightDTO": {
         "type": "object",
@@ -11416,7 +11606,6 @@
           },
           "visibleOperations": {
             "type": "array",
-            "uniqueItems": true,
             "items": {
               "type": "string",
               "enum": [
@@ -11429,7 +11618,8 @@
                 "SUBSCRIPTION",
                 "TRANSFER_OWNERSHIP"
               ]
-            }
+            },
+            "uniqueItems": true
           }
         },
         "title": "PersonRequestWithIdDTO"
@@ -11859,107 +12049,6 @@
         },
         "title": "RelationFullDTO"
       },
-      "RelationFullExportDTO": {
-        "type": "object",
-        "properties": {
-          "canManageRelatedPersonAsUser": {
-            "type": "boolean"
-          },
-          "effectiveDate": {
-            "type": "string",
-            "format": "date"
-          },
-          "function": {
-            "type": "string"
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "ifOtherPleaseSpecifyProviderType": {
-            "type": "string"
-          },
-          "meansOfControl": {
-            "type": "string"
-          },
-          "meansOfControlOther": {
-            "type": "string"
-          },
-          "originOfPower": {
-            "type": "string",
-            "enum": [
-              "ARTICLE_OF_ASSOCIATION",
-              "CONVENTIONAL",
-              "COURT_RULING",
-              "OTHER",
-              "VOTE"
-            ]
-          },
-          "originOfPowerIfOther": {
-            "type": "string"
-          },
-          "person": {
-            "$ref": "#/components/schemas/PersonDTO"
-          },
-          "personType": {
-            "type": "string",
-            "enum": [
-              "COMPANY",
-              "INDIVIDUAL",
-              "PRODUCT"
-            ]
-          },
-          "providerType": {
-            "type": "string",
-            "enum": [
-              "AUDITORS",
-              "BANK_FINANCIAL",
-              "BROKER",
-              "CONSULTANT",
-              "CUSTODIAN",
-              "FUND_ADMINISTRATOR",
-              "GENERAL_PARTNER",
-              "INITIATOR",
-              "INVESTMENT_ADVISOR",
-              "INVESTMENT_MANAGER",
-              "MANAGEMENT_COMPANY",
-              "OTHER",
-              "SUB_DISTRIBUTOR",
-              "SUPPLIERS",
-              "TARGET_INVESTMENT",
-              "TRANSFER_AGENT",
-              "VENDORS"
-            ]
-          },
-          "relatedPerson": {
-            "$ref": "#/components/schemas/PersonDTO"
-          },
-          "rightsPercentage": {
-            "type": "number",
-            "format": "double"
-          },
-          "shares": {
-            "type": "number",
-            "format": "double"
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "ADMINISTRATOR",
-              "BUYER",
-              "CONTACT",
-              "CO_INVESTOR",
-              "LENDER",
-              "REPRESENTATIVE",
-              "SERVICE_PROVIDER",
-              "SHAREHOLDER",
-              "UBO",
-              "VENDOR"
-            ]
-          }
-        },
-        "title": "RelationFullExportDTO"
-      },
       "RelationLenderDTO": {
         "type": "object",
         "properties": {
@@ -12293,28 +12382,6 @@
           }
         },
         "title": "RelationShareholderRequestDTO"
-      },
-      "RelationTypeDTO": {
-        "type": "object",
-        "properties": {
-          "active": {
-            "type": "boolean"
-          },
-          "canScore": {
-            "type": "boolean"
-          },
-          "canScreen": {
-            "type": "boolean"
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "name": {
-            "type": "string"
-          }
-        },
-        "title": "RelationTypeDTO"
       },
       "RelationUboDTO": {
         "type": "object",
@@ -12783,9 +12850,6 @@
         }
       },
       "ExternalAuthorisationRequestDTO": {
-        "required": [
-          "authorizations"
-        ],
         "type": "object",
         "properties": {
           "authorizations": {
@@ -12801,7 +12865,10 @@
               ]
             }
           }
-        }
+        },
+        "required": [
+          "authorizations"
+        ]
       },
       "ExternalUserDTO": {
         "type": "object",
@@ -13403,15 +13470,15 @@
         }
       },
       "UpdateTeamRequestDTO": {
-        "required": [
-          "name"
-        ],
         "type": "object",
         "properties": {
           "name": {
             "type": "string"
           }
-        }
+        },
+        "required": [
+          "name"
+        ]
       },
       "TransferOverviewParamsDTO": {
         "type": "object",
@@ -13742,7 +13809,6 @@
           },
           "personTypes": {
             "type": "array",
-            "uniqueItems": true,
             "items": {
               "type": "string",
               "enum": [
@@ -13750,14 +13816,14 @@
                 "INDIVIDUAL",
                 "PRODUCT"
               ]
-            }
+            },
+            "uniqueItems": true
           },
           "sellerName": {
             "type": "string"
           },
           "sellerPersonTypes": {
             "type": "array",
-            "uniqueItems": true,
             "items": {
               "type": "string",
               "enum": [
@@ -13765,7 +13831,8 @@
                 "INDIVIDUAL",
                 "PRODUCT"
               ]
-            }
+            },
+            "uniqueItems": true
           },
           "sharePrice": {
             "$ref": "#/components/schemas/AmountRange"
@@ -14305,50 +14372,18 @@
         },
         "title": "PageOfTransferDTO"
       },
-      "Pageable": {
-        "type": "object",
-        "properties": {
-          "page": {
-            "minimum": 0,
-            "type": "integer",
-            "format": "int32"
-          },
-          "size": {
-            "minimum": 1,
-            "type": "integer",
-            "format": "int32"
-          },
-          "sort": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        }
-      },
       "UnsortedPageable": {
         "type": "object",
         "properties": {
           "page": {
-            "minimum": 0,
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "minimum": 0
           },
           "size": {
-            "minimum": 1,
             "type": "integer",
-            "format": "int32"
-          }
-        }
-      },
-      "UserLanguageRequestDTO": {
-        "required": [
-          "language"
-        ],
-        "type": "object",
-        "properties": {
-          "language": {
-            "type": "string"
+            "format": "int32",
+            "minimum": 1
           }
         }
       },
@@ -14674,11 +14709,6 @@
         }
       },
       "ExternalUserRequestDTO": {
-        "required": [
-          "email",
-          "name",
-          "role"
-        ],
         "type": "object",
         "properties": {
           "role": {
@@ -14726,7 +14756,12 @@
               ]
             }
           }
-        }
+        },
+        "required": [
+          "email",
+          "name",
+          "role"
+        ]
       },
       "TeamRequestDTO": {
         "type": "object",
@@ -15520,6 +15555,12 @@
             "type": "boolean"
           }
         }
+      }
+    },
+    "securitySchemes": {
+      "bearer_token": {
+        "type": "http",
+        "scheme": "bearer"
       }
     }
   }
